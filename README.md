@@ -82,50 +82,60 @@ chemical-equipment-visualizer/
 
 🚀 Quick Start (One-Time Setup)
 Step 1: Backend Setup
-
+```cmd
 cd backend
-
+```
 # Create virtual environment
+```cmd
 python -m venv venv
-
+```
 # Activate (Windows)
+```cmd
 venv\Scripts\activate
-
+```
 # Install packages
+```cmd
 pip install Django==4.2.7 djangorestframework==3.14.0 django-cors-headers==4.2.0 reportlab==4.0.4 PyPDF2==3.0.1
-
+```
 # Setup database
+```cmd
 python manage.py migrate
-
+```
 # Create admin user 
+```cmd
 python manage.py createsuperuser
-
+```
 # Create uploads folder
+```cmd
 mkdir media\uploads
-
+```
 
 Step 2: Web Frontend Setup
+```cmd
 cd frontend-web
-
+```
 # Install dependencies
+```cmd
 npm install
-
-
+```
 Step 3: Desktop App Setup
+```cmd
 cd frontend-desktop
-
+```
 # Create virtual environment
+```cmd
 python -m venv venv
-
+```
 # Activate
+```cmd
 venv\Scripts\activate
-
+```
 # Install packages
+```cmd
 pip install PyQt5==5.15.9 requests==2.31.0
-
-Daily Startup Guide
+```
+## How to Run
 Method 1: Manual (3 Terminals)
-
 
 Terminal 1: Start Backend
 ```bash
