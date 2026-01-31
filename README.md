@@ -57,6 +57,21 @@ Both frontends communicate with the same REST API to ensure consistent behavior.
 
 ---
 
+## Screenshots
+
+<img width="1908" height="879" alt="Screenshot 2026-01-31 160003" src="https://github.com/user-attachments/assets/21401732-80cb-4fca-b8d7-4f0867d24837" />
+
+<img width="1919" height="866" alt="Screenshot 2026-01-31 192007" src="https://github.com/user-attachments/assets/70088abe-9dbe-4404-857a-ae50128be2cb" />
+
+
+<img width="1403" height="834" alt="Screenshot 2026-01-31 154742" src="https://github.com/user-attachments/assets/da555d3a-6c0e-4395-9a2b-a88a58ab69b4" />
+
+<img width="1917" height="899" alt="Screenshot 2026-01-31 160020" src="https://github.com/user-attachments/assets/6985ca5f-b24f-497a-ab41-677ba6e6651c" />
+
+<img width="1919" height="858" alt="Screenshot 2026-01-31 160041" src="https://github.com/user-attachments/assets/8a98e96f-8c43-4d3d-8df2-7fdb47ca5dca" />
+
+
+<img width="1879" height="749" alt="Screenshot 2026-01-31 160032" src="https://github.com/user-attachments/assets/0791c5ba-4dd9-445f-82c4-012cce5ae00c" />
 ## Project Structure
 ```cmd
 chemical-equipment-visualizer/
@@ -208,22 +223,6 @@ Uploaded files are validated before processing
 SQLite database is suitable for development (use PostgreSQL for production)
 
 CORS is configured to allow only specific origins
-
-## Screenshots
-<img width="1917" height="899" alt="Screenshot 2026-01-31 153650" src="https://github.com/user-attachments/assets/0312977f-aa23-4fd0-a23b-e99b4cb829ef" />
-
-<img width="1919" height="866" alt="Screenshot 2026-01-31 192007" src="https://github.com/user-attachments/assets/70088abe-9dbe-4404-857a-ae50128be2cb" />
-
-
-<img width="1403" height="834" alt="Screenshot 2026-01-31 154742" src="https://github.com/user-attachments/assets/da555d3a-6c0e-4395-9a2b-a88a58ab69b4" />
-
-<img width="1917" height="899" alt="Screenshot 2026-01-31 160020" src="https://github.com/user-attachments/assets/6985ca5f-b24f-497a-ab41-677ba6e6651c" />
-
-<img width="1919" height="858" alt="Screenshot 2026-01-31 160041" src="https://github.com/user-attachments/assets/8a98e96f-8c43-4d3d-8df2-7fdb47ca5dca" />
-
-
-<img width="1879" height="749" alt="Screenshot 2026-01-31 160032" src="https://github.com/user-attachments/assets/0791c5ba-4dd9-445f-82c4-012cce5ae00c" />
-
 
 🤝 Contributing
 Fork the repository
