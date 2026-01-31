@@ -21,7 +21,8 @@ A professional desktop application for visualizing and analyzing chemical equipm
 
 | Main Interface                          | Data Visualization                |
 | --------------------------------------- | --------------------------------- |
-| ![Main Interface](<img width="1908" height="879" alt="Screenshot 2026-01-31 160003" src="https://github.com/user-attachments/assets/f18fc348-6ed8-420c-aaf4-6fac587977b0" />) | ![Charts](<img width="1917" height="899" alt="Screenshot 2026-01-31 160020" src="https://github.com/user-attachments/assets/08be3b49-c712-4cbd-b7b3-0df30ccfd1fa" />
+| ![Main Interface](<img width="1908" height="879" alt="Screenshot 2026-01-31 160003" src="https://github.com/user-attachments/assets/f22bbf3b-a668-48fe-b59e-58bb8ac33977" />) 
+ | ![Charts](<img width="1917" height="899" alt="Screenshot 2026-01-31 160020" src="https://github.com/user-attachments/assets/08be3b49-c712-4cbd-b7b3-0df30ccfd1fa" />
 ) |
 
 
