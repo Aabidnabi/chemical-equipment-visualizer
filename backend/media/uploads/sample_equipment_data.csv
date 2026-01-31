@@ -1,0 +1,16 @@
+Equipment Name,Equipment Type,Flowrate,Pressure,Temperature
+Reactor-001,Reactor,150.5,10.2,85.0
+Mixer-001,Mixer,200.0,5.5,65.0
+Separator-001,Separator,120.3,8.7,75.5
+Reactor-002,Reactor,180.7,12.1,90.0
+HeatEx-001,Heat Exchanger,250.0,6.8,120.5
+Pump-001,Pump,300.2,15.3,40.0
+Reactor-003,Reactor,165.8,11.5,88.0
+Mixer-002,Mixer,210.5,5.8,68.0
+Separator-002,Separator,135.0,9.2,78.0
+Pump-002,Pump,280.7,14.8,42.5
+Cooler-001,Cooler,95.3,3.2,25.0
+Heater-001,Heater,175.2,7.8,150.0
+Valve-001,Valve,50.0,20.1,45.0
+Tank-001,Tank,0.0,1.5,30.0
+Compressor-001,Compressor,400.5,25.3,65.0
