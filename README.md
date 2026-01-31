@@ -1,107 +1,219 @@
-# Chemical Equipment Parameter Visualizer 🧪📊
+```markdown
+# Chemical Equipment Parameter Visualizer
 
-A professional desktop application for visualizing and analyzing chemical equipment data. Upload CSV files containing equipment parameters (flowrate, pressure, temperature) and instantly generate insightful visualizations and PDF reports.
+A hybrid web and desktop application for visualizing and analyzing chemical equipment parameters.  
+The application allows users to upload CSV files containing equipment data and provides interactive charts, summary statistics, dataset history, and PDF reports.
 
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![PyQt5](https://img.shields.io/badge/PyQt5-5.15.9-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-success)
+Both the web frontend and the desktop application communicate with a shared backend API.
 
-## ✨ Features
+## Architecture
 
-- **📤 CSV Upload**: Import equipment data from CSV files
-- **📊 Interactive Charts**: Bar charts and line graphs for data visualization
-- **📈 Summary Statistics**: Quick overview of equipment distribution and parameter ranges
-- **📋 Data Table**: Detailed view of all equipment records
-- **📄 PDF Reports**: Generate professional PDF reports with charts and statistics
-- **🕐 History Tracking**: Access previously uploaded datasets
-- **🎨 Modern UI**: Clean, intuitive interface with professional styling
+The system consists of three components.
 
-## 📸 Screenshots
+Backend API  
+Django and Django REST Framework handle data ingestion, validation, processing, storage, and report generation.
 
-### Main Interface
-![Main Interface](https://github.com/user-attachments/assets/9145c9d5-88fb-474e-8743-7870185a51ce)
+Web Frontend  
+React with Chart.js provides a browser based interface for visualization and analysis.
 
-### Data Visualization Charts
-![Charts](https://github.com/user-attachments/assets/7045c73f-9334-4d89-b7dc-0bf7dbaeb3d4)
+Desktop Frontend  
+PyQt5 with Matplotlib or PyQtChart provides a native desktop interface with the same functionality.
 
-### Parameter Graphs
-![Graphs](https://github.com/user-attachments/assets/d59f5c25-6fb6-4e05-bdf1-3c6f7b4eb943)
+## Features
 
-### Data Table View
-![Data Table](https://github.com/user-attachments/assets/899a9df4-339e-4327-8bcd-087cf84b4de1)
+CSV upload from web and desktop  
+Interactive charts for equipment parameters  
+Automatic summary statistics  
+History of the last 5 uploaded datasets  
+PDF report generation  
+Basic HTTP authentication  
+SQLite database persistence  
+Cross platform support
 
+## Technology Stack
 
-## 🚀 Quick Start
+Backend: Django, Django REST Framework  
+Database: SQLite  
+Web Frontend: React, Chart.js  
+Desktop Frontend: PyQt5, Matplotlib or PyQtChart  
+Data Processing: Python csv module  
+PDF Generation: ReportLab
+
+## Project Structure
+
+chemical-equipment-visualizer/
+├── backend/
+│   ├── config/
+│   ├── equipment_api/
+│   ├── media/
+│   │   └── uploads/
+│   ├── venv/
+│   ├── db.sqlite3
+│   └── manage.py
+├── frontend-web/
+│   ├── src/
+│   │   └── components/
+│   ├── public/
+│   └── package.json
+├── frontend-desktop/
+│   ├── venv/
+│   └── main.py
+└── sample_equipment_data.csv
+
+## Quick Start Guide
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- Git (optional, for cloning)
+Python 3.8 or higher  
+Node.js 16 or higher  
+Git
 
-### Installation
+### Backend Setup
 
-1. **Clone the repository** (or download ZIP):
+cd backend  
+python -m venv venv  
 
-```bash
-git clone https://github.com/yourusername/chemical-equipment-visualizer.git
-cd chemical-equipment-visualizer
+Activate virtual environment.
+
+Windows  
+venv\Scripts\activate  
+
+Linux or macOS  
+source venv/bin/activate  
+
+Install dependencies.
+
+pip install Django==4.2.7 djangorestframework==3.14.0 django-cors-headers==4.2.0 reportlab==4.0.4 PyPDF2==3.0.1  
+
+Apply migrations.
+
+python manage.py migrate  
+
+Create superuser.
+
+python manage.py createsuperuser  
+
+Example credentials  
+Username: admin  
+Password: password123  
+
+Create upload directory.
+
+mkdir media\uploads  
+
+Start server.
+
+python manage.py runserver  
+
+Backend URL  
+http://localhost:8000  
+
+### Web Frontend Setup
+
+cd frontend-web  
+npm install  
+npm start  
+
+Web application URL  
+http://localhost:3000  
+
+### Desktop Application Setup
+
+cd frontend-desktop  
+python -m venv venv  
+
+Activate environment and install dependencies.
+
+pip install PyQt5==5.15.9 requests==2.31.0  
+
+Run application.
+
+python main.py  
+
+## CSV File Format
+
+Equipment Name,Equipment Type,Flowrate,Pressure,Temperature  
+Reactor-001,Reactor,150.5,10.2,85.0  
+Mixer-001,Mixer,200.0,5.5,65.0  
+Separator-001,Separator,120.3,8.7,75.5  
+
+A sample file is included as sample_equipment_data.csv.
+
+## Usage
+
+Web Application  
+Upload CSV file.  
+Charts and statistics render automatically.  
+Switch between charts and data table.  
+Generate and download PDF reports.  
+View last 5 uploaded datasets.
+
+Desktop Application  
+Upload CSV file.  
+View charts and summaries.  
+Navigate between summary and data table tabs.  
+Generate PDF reports.
+
+## API Access
+
+Base URL  
+http://localhost:8000/api/
+
+Endpoints  
+
+GET /api/datasets/  
+POST /api/datasets/  
+GET /api/history/  
+GET /api/datasets/{id}/generate_report/
+
+Authentication uses Basic HTTP auth.
+
+Username: admin  
+Password: password123  
+
+## Database Schema
+
+EquipmentDataset stores dataset metadata.  
+EquipmentData stores individual equipment records.
+
+## Troubleshooting
+
+CORS errors  
+Ensure django-cors-headers is installed.  
+Ensure CORS_ALLOWED_ORIGINS includes http://localhost:3000.
+
+Port conflicts  
+
+netstat -ano | findstr :8000  
+netstat -ano | findstr :3000  
+taskkill /PID <PID> /F  
+
+## Running All Components Manually
+
+Terminal 1  
+cd backend  
+venv\Scripts\activate  
+python manage.py runserver  
+
+Terminal 2  
+cd frontend-web  
+npm start  
+
+Terminal 3  
+cd frontend-desktop  
+venv\Scripts\activate  
+python main.py  
+
+## Deployment Notes
+
+Use PostgreSQL or MySQL in production.  
+Set DEBUG to False.  
+Use environment variables for secrets.  
+Enable HTTPS.  
+Use Gunicorn or uWSGI.  
+Configure static files and logging.
+
+## License
+
+Educational project for intern screening.
 ```
-
-2. **Create virtual environment** (recommended)
-
-# Windows
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-# macOS/Linux
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-3. **Install dependencies:**
-
-```bash
-pip install -r requirements.txt
-```
-
-4. **Run the application:**
-
-```bash
-python main.py
-```
-
-🎮 How to Use
-
-1. Upload Data
-   Click "Select CSV File" button
-
-Choose your equipment data CSV file
-
-Wait for upload confirmation
-
-2. View Analysis
-   Summary Tab: See statistics and charts
-
-Data Table Tab: View all records in tabular format
-
-Charts: Interactive bar and line charts
-
-3. Generate Reports
-   Click "Generate PDF" button
-
-Choose save location
-
-Open the generated report
-
-4. Manage History
-   View recent datasets in left panel
-
-Click to reload previous analyses
-
-Refresh list with the Refresh button
