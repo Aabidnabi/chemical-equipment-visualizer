@@ -58,7 +58,7 @@ Both frontends communicate with the same REST API to ensure consistent behavior.
 ---
 
 ## Project Structure
-
+```cmd
 chemical-equipment-visualizer/
 ├── backend/
 │   ├── config/
@@ -77,8 +77,7 @@ chemical-equipment-visualizer/
 │   ├── venv/
 │   └── main.py
 └── sample_equipment_data.csv
-
-
+```
 ---
 
 🚀 Quick Start (One-Time Setup)
@@ -98,7 +97,7 @@ pip install Django==4.2.7 djangorestframework==3.14.0 django-cors-headers==4.2.0
 # Setup database
 python manage.py migrate
 
-# Create admin user (use: admin/password123)
+# Create admin user 
 python manage.py createsuperuser
 
 # Create uploads folder
@@ -151,50 +150,39 @@ python main.py
 ```
  Desktop app opens as window
 
-OR
-
-# Terminal 1 - Backend
-cd backend && venv\Scripts\activate && python manage.py runserver
-
-# Terminal 2 - Web Frontend
-cd frontend-web && npm start
-
-# Terminal 3 - Desktop App
-cd frontend-desktop && venv\Scripts\activate && python main.py
-
-🔗 Application URLs & Access
-Application	URL
-Backend API	http://localhost:8000	
-Admin Panel	http://localhost:8000/admin	
-Web App	http://localhost:3000
-Desktop App	Run python main.py	
+## 🔗 Application URLs & Access
+- Application	URL
+- Backend API	http://localhost:8000	
+- Admin Panel	http://localhost:8000/admin	
+- Web App	http://localhost:3000
+- Desktop App	Run python main.py	
 
 ## API Endpoints:
-GET /api/datasets/ - List datasets
-POST /api/datasets/ - Upload CSV
-GET /api/history/ - Get history
-GET /api/datasets/{id}/generate_report/ - PDF report
+- GET /api/datasets/ - List datasets
+- POST /api/datasets/ - Upload CSV
+- GET /api/history/ - Get history
+- GET /api/datasets/{id}/generate_report/ - PDF report
 
 ## How to Use
-Web Application (http://localhost:3000)
-Click "Select CSV File"
-Choose your CSV file
-View automatic charts & statistics
-Click "Generate PDF" for report
-View history in left panel
+- Web Application (http://localhost:3000)
+- Click "Select CSV File"
+- Choose your CSV file
+- View automatic charts & statistics
+- Click "Generate PDF" for report
+- View history in left panel
 
 
-Desktop Application
-Click "Select CSV File" button
-Choose CSV file
-View charts in "Summary & Charts" tab
-See raw data in "Data Table" tab
-Generate PDF reports
+## Desktop Application
+- Click "Select CSV File" button
+- Choose CSV file
+- View charts in "Summary & Charts" tab
+- See raw data in "Data Table" tab
+- Generate PDF reports
 
-Both interfaces:
-Upload same CSV to see consistent results
-History shared between both apps
-Same backend API serves both
+## Both interfaces:
+- Upload same CSV to see consistent results
+- History shared between both apps
+- Same backend API serves both
 
 
 ## Database Schema
