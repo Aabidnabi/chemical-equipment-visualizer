@@ -1,1 +1,246 @@
+# Chemical Equipment Parameter Visualizer
+
+A hybrid web and desktop application for visualizing and analyzing chemical equipment parameters.  
+The system supports CSV uploads, interactive visualizations, statistical summaries, dataset history, and PDF report generation.
+
+The application uses a shared backend API that serves both a web frontend and a desktop frontend.
+
+---
+
+## Architecture
+
+The system has three core components.
+
+### Backend API
+- Django
+- Django REST Framework
+- Central data processing and storage
+- Shared by both frontends
+
+### Web Frontend
+- React
+- Chart.js
+- Runs in a browser
+
+### Desktop Frontend
+- PyQt5
+- Matplotlib or PyQtChart
+- Runs as a standalone desktop application
+
+Both frontends communicate with the same REST API to ensure consistent behavior.
+
+---
+
+## Features
+
+- CSV upload from web and desktop
+- Interactive charts for equipment parameters
+- Automatic summary statistics
+- History of the last 5 uploaded datasets
+- PDF report generation
+- Basic HTTP authentication
+- SQLite database for persistence
+- Cross platform support
+
+---
+
+## Technology Stack
+
+| Layer | Technology | Purpose |
+|-----|-----------|---------|
+| Backend | Django, Django REST Framework | API and data processing |
+| Database | SQLite | Data storage |
+| Web Frontend | React, Chart.js | Browser visualization |
+| Desktop Frontend | PyQt5, Matplotlib or PyQtChart | Desktop visualization |
+| Data Processing | Python csv module | CSV parsing |
+| PDF Generation | ReportLab | Report creation |
+
+---
+
+## Project Structure
+
+chemical-equipment-visualizer/
+├── backend/
+│   ├── config/
+│   ├── equipment_api/
+│   ├── media/
+│   │   └── uploads/
+│   ├── venv/
+│   ├── db.sqlite3
+│   └── manage.py
+├── frontend-web/
+│   ├── src/
+│   │   └── components/
+│   ├── public/
+│   └── package.json
+├── frontend-desktop/
+│   ├── venv/
+│   └── main.py
+└── sample_equipment_data.csv
+
+
+---
+
+🚀 Quick Start (One-Time Setup)
+Step 1: Backend Setup
+
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install packages
+pip install Django==4.2.7 djangorestframework==3.14.0 django-cors-headers==4.2.0 reportlab==4.0.4 PyPDF2==3.0.1
+
+# Setup database
+python manage.py migrate
+
+# Create admin user (use: admin/password123)
+python manage.py createsuperuser
+
+# Create uploads folder
+mkdir media\uploads
+
+
+Step 2: Web Frontend Setup
+cd frontend-web
+
+# Install dependencies
+npm install
+
+
+Step 3: Desktop App Setup
+cd frontend-desktop
+
+# Create virtual environment
+python -m venv venv
+
+# Activate
+venv\Scripts\activate
+
+# Install packages
+pip install PyQt5==5.15.9 requests==2.31.0
+
+Daily Startup Guide
+Method 1: Manual (3 Terminals)
+
+
+Terminal 1: Start Backend
+```bash
+cd F:\chemical-equipment-visualizer\backend
+venv\Scripts\activate
+python manage.py runserver
+```
+Backend running: http://localhost:8000
+
+Terminal 2: Start Web App
+```bash
+cd F:\chemical-equipment-visualizer\frontend-web
+npm start
+```
+Web app opens: http://localhost:3000
+
+Terminal 3: Start Desktop App
+```bash
+cd F:\chemical-equipment-visualizer\frontend-desktop
+venv\Scripts\activate
+python main.py
+```
+ Desktop app opens as window
+
+OR
+
+# Terminal 1 - Backend
+cd backend && venv\Scripts\activate && python manage.py runserver
+
+# Terminal 2 - Web Frontend
+cd frontend-web && npm start
+
+# Terminal 3 - Desktop App
+cd frontend-desktop && venv\Scripts\activate && python main.py
+
+🔗 Application URLs & Access
+Application	URL
+Backend API	http://localhost:8000	
+Admin Panel	http://localhost:8000/admin	
+Web App	http://localhost:3000
+Desktop App	Run python main.py	
+
+## API Endpoints:
+GET /api/datasets/ - List datasets
+POST /api/datasets/ - Upload CSV
+GET /api/history/ - Get history
+GET /api/datasets/{id}/generate_report/ - PDF report
+
+## How to Use
+Web Application (http://localhost:3000)
+Click "Select CSV File"
+Choose your CSV file
+View automatic charts & statistics
+Click "Generate PDF" for report
+View history in left panel
+
+
+Desktop Application
+Click "Select CSV File" button
+Choose CSV file
+View charts in "Summary & Charts" tab
+See raw data in "Data Table" tab
+Generate PDF reports
+
+Both interfaces:
+Upload same CSV to see consistent results
+History shared between both apps
+Same backend API serves both
+
+
+## Database Schema
+EquipmentDataset: Stores uploaded dataset metadata
+
+EquipmentData: Stores individual equipment records
+
+## 🔒 Security Notes
+Basic authentication is used for API protection
+
+Uploaded files are validated before processing
+
+SQLite database is suitable for development (use PostgreSQL for production)
+
+CORS is configured to allow only specific origins
+
+
+🤝 Contributing
+Fork the repository
+
+Create a feature branch
+
+Make your changes
+
+Add tests if applicable
+
+Submit a pull request
+
+📄 License
+This project is for educational purposes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
