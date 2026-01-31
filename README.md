@@ -19,22 +19,17 @@ A professional desktop application for visualizing and analyzing chemical equipm
 
 ## 📸 Screenshots
 
-| Main Interface                          
-| --------------------------------------- |
-## Main Interface
- <img width="1908" height="879" alt="Screenshot 2026-01-31 160003" src="https://github.com/user-attachments/assets/9145c9d5-88fb-474e-8743-7870185a51ce" />
-| Data Visualization                |
-| --------------------------------- |
+### Main Interface
+![Main Interface](https://github.com/user-attachments/assets/9145c9d5-88fb-474e-8743-7870185a51ce)
 
-## Charts
-<img width="1917" height="899" alt="Screenshot 2026-01-31 160020" src="https://github.com/user-attachments/assets/7045c73f-9334-4d89-b7dc-0bf7dbaeb3d4" />
-## Graphs
-<img width="1879" height="749" alt="Screenshot 2026-01-31 160032" src="https://github.com/user-attachments/assets/d59f5c25-6fb6-4e05-bdf1-3c6f7b4eb943" />
+### Data Visualization Charts
+![Charts](https://github.com/user-attachments/assets/7045c73f-9334-4d89-b7dc-0bf7dbaeb3d4)
 
-| Data Table                          
-| ------------------------------------ 
-## Data Table
-<img width="1909" height="871" alt="Screenshot 2026-01-31 160058" src="https://github.com/user-attachments/assets/899a9df4-339e-4327-8bcd-087cf84b4de1" />
+### Parameter Graphs
+![Graphs](https://github.com/user-attachments/assets/d59f5c25-6fb6-4e05-bdf1-3c6f7b4eb943)
+
+### Data Table View
+![Data Table](https://github.com/user-attachments/assets/899a9df4-339e-4327-8bcd-087cf84b4de1)
 
 
 ## 🚀 Quick Start
