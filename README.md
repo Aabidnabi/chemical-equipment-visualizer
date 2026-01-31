@@ -73,7 +73,7 @@ Both frontends communicate with the same REST API to ensure consistent behavior.
 <img width="1919" height="858" alt="Screenshot 2026-01-31 160041" src="https://github.com/user-attachments/assets/8a98e96f-8c43-4d3d-8df2-7fdb47ca5dca" />
 
 ### PDF Report
-
+<img width="1240" height="631" alt="Screenshot 2026-01-31 193348" src="https://github.com/user-attachments/assets/db7c8882-3827-46e9-8f33-fd01b26939ab" />
 
 ---
 ## Project Structure
