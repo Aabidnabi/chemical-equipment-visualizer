@@ -58,8 +58,7 @@ Both frontends communicate with the same REST API to ensure consistent behavior.
 ---
 ## 📸 Screenshots
 
-### Main Interface
- <img width="1908" height="879" alt="Screenshot 2026-01-31 160003" src="https://github.com/user-attachments/assets/21401732-80cb-4fca-b8d7-4f0867d24837" /> 
+### Main Interface 
 <img width="1919" height="866" alt="Screenshot 2026-01-31 192007" src="https://github.com/user-attachments/assets/70088abe-9dbe-4404-857a-ae50128be2cb" />
 
 ### Charts
